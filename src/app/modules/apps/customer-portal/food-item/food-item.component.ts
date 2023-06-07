@@ -6,6 +6,8 @@ import { CustomerPortalService } from '../customer-portal.service';
   styleUrls: ['./food-item.component.scss']
 })
 export class FoodItemComponent {
+
+   counts:any=0;
   constructor(
     private customerendservice:CustomerPortalService
    ) {
@@ -17,19 +19,19 @@ export class FoodItemComponent {
   ];
 
   incrementCount(item: any) {
-    item.count++;
+    this.counts++;
     this.updateCount();
   }
 
   decrementCount(item: any) {
-    if (item.count > 0) {
-      item.count--;
+    if (this.counts > 0) {
+      this.counts--;
       this.updateCount();
     }
   }
 
   updateCount() {
-    const totalCount = this.accordionItems.reduce((total, item) => total + item.count, 0);
+    const totalCount = this.accordionItems.reduce((total, item) => total + this.counts, 0);
     this.customerendservice.setCount(totalCount);
   }
 }
