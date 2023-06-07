@@ -1,0 +1,41 @@
+<div class="p-3">
+    <!-- Hotel Details start -->
+    <div class="card p-5">
+        <div class="d-flex flex-row px-3">
+            <div class="d-flex justify-content-start col-4 col-lg-1 me-lg-5 col-sm-2 col-md-2">
+                <img class="h-80px rounded-3 "
+                    src="https://lh3.googleusercontent.com/Qcf2-saBcPx39mP8-wVHPOidzXV5BbOYyJxxp7_3Mz3cuIy3X6C3O76wEImhiy_-wNez1W9TbaXwIjWCSRreNj2bksgl215qylwcEt05vA"
+                    alt="haribavan">
+            </div>
+            <div class="d-flex flex-column p-2">
+                <h5 class="mb-3 fs-4">Haribavanam Hotel</h5>
+                <h6 class="mb-3 fs-7">Gold-Wins, Coimbatore</h6>
+            </div>
+        </div>
+    </div>
+    <!-- Hotel Details end -->
+
+    <!-- Accordion start -->
+    <div class="mt-5">
+        <ngb-accordion>
+            <ngb-panel *ngFor="let item of accordionItems">
+                <ng-template ngbPanelTitle>
+                    <div class="text">{{item.title}}</div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                    <div>
+                        <app-food-item></app-food-item>
+                    </div>
+                </ng-template>
+            </ngb-panel>
+        </ngb-accordion>
+
+        <div class="d-flex justify-content-end align-end mt-2">
+            <button class="btn btn-primary btn-sm me-2"
+                [style.visibility]="isOrderPlacedVisible ? 'visible' : 'hidden'">
+                place order
+            </button>
+        </div>
+    </div>
+    <!-- Accordion end -->
+</div>

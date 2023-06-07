@@ -1,0 +1,4 @@
+{
+    "mock" : true,
+    "apiUrl" : "http://34.217.81.255:8081/api/foodservice/v1"
+}   
