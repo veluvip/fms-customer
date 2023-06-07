@@ -6,7 +6,7 @@ import { CustomerPortalService } from '../customer-portal.service';
   styleUrls: ['./food-item.component.scss']
 })
 export class FoodItemComponent {
-
+  dishType:any='non-veg';
    counts:any=0;
   constructor(
     private customerendservice:CustomerPortalService
@@ -33,5 +33,17 @@ export class FoodItemComponent {
   updateCount() {
     const totalCount = this.accordionItems.reduce((total, item) => total + this.counts, 0);
     this.customerendservice.setCount(totalCount);
+  }
+
+  getBadgeClass(dishType: string) {
+    if (dishType === 'veg') {
+      return 'badge badge-success';
+    } else if (dishType === 'non-veg') {
+      return 'badge badge-danger';
+    } else if (dishType === 'egg') {
+      return 'badge badge-warning';
+    } else {
+      return 'badge badge-secondary'; // Default badge color
+    }
   }
 }
