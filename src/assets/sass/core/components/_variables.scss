@@ -758,8 +758,8 @@ $card-border-enabled:               				false !default;
 // Accordion
 $accordion-color:                               var(--#{$prefix}body-color) !default;
 $accordion-bg:                                  var(--#{$prefix}body-bg) !default;
-$accordion-padding-y:                           1.5rem !default;
-$accordion-padding-x:                           1.5rem !default;
+$accordion-padding-y:                           0.90rem !default;
+$accordion-padding-x:                           0.90rem !default;
 $accordion-border-color:                        var(--#{$prefix}border-color) !default;
 $accordion-border-radius:                       $border-radius !default;
 $accordion-button-color:                  		$accordion-color !default;
