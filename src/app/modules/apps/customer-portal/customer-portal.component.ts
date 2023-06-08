@@ -11,8 +11,6 @@ export class CustomerPortalComponent implements OnInit{
   count:any=0;
   accordionItems = [
     { title: 'Briyani', content: 'Content for Accordion Item #1',count:0 },
-    { title: 'Briyani', content: 'Content for Accordion Item #1',count:0 },
-    { title: 'Briyani', content: 'Content for Accordion Item #1',count:0 },
    
   ];
 
@@ -37,6 +35,6 @@ export class CustomerPortalComponent implements OnInit{
       count=>{
         this.count=count;
       }
-    )
+    );
   }
 }
