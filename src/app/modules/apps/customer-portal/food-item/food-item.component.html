@@ -1,15 +1,16 @@
 <div class="d-flex flex-row">
   <div class="d-flex col-10 flex-row pe-5">
-    <div>
+    <div class="symbol-fixed position-relative">
       <img class="h-70px rounded-4"
         src="https://imgmedia.lbb.in/media/2023/05/6476fd5a9fa97008b3ded602_1685519706838.jpg" alt="logo">
-    </div>
-    <div class="ps-3 p-1 pt-3">
+        <div [ngClass]="getBadgeClass(dishType)" class=" badge badge-circle position-absolute translate-middle bottom-0 start-100 mb-6  rounded-circle border border-4 border-body h-20px w-20px"></div>
+      </div>
+    <div class="ps-5 p-1 pt-3">
       <div class="fw-bold fs-5 mb-1">
-        <span [ngClass]="getBadgeClass(dishType)" class="badge badge-circle w-10px h-10px me-1"></span>
+        <!-- <span [ngClass]="getBadgeClass(dishType)" class="badge badge-circle w-10px h-10px me-1"></span> -->
         Chicken Briyani
       </div>
-      <div class=" fw-bold ms-6  fs-8">"So Delicious"</div>
+      <div class=" fw-bold  fs-8">"So Delicious"</div>
     </div>
   </div>
   <div class="d-flex justify-content-end col-2 flex-column pt-4 ">
@@ -20,7 +21,7 @@
 
 
 <div *ngFor="let item of accordionItems" class="d-flex mt-2 ">
-  <div class="col-4 h-10px d-flex d-row mt-2 ms-2"><span class="badge text fs-9 badge-warning me-5">BestSeller</span> <span class="badge  text fs-9  badge-warning">BestSeller</span></div>
+  <div class="col-4 h-15px d-flex d-row mt-2 ms-2"><span class="badge text text-dark fs-8 p-2 badge-warning me-5">BestSeller</span> <span class="badge p-2 text text-dark fs-8  badge-warning">BestSeller</span></div>
   <div class="col-2 "></div>
   <div class="d-flex flex-wrap  flex-end col-6">
     <div [style.visibility]="counts>0 ? 'hidden' : 'visible'">
